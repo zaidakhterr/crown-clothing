@@ -3,6 +3,16 @@ body {
   padding: 20px 40px;
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+  transition: 500ms color;
+
+  &:hover {
+    color: #777;
+  }
+}
+
 .app {
   height: 100vh;
 }
