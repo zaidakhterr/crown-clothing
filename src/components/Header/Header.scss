@@ -9,6 +9,11 @@
     height: 100%;
     width: 70px;
     padding: 13px 25px;
+    transition: 300ms all;
+
+    &-active {
+      transform: scale(1.1);
+    }
   }
 
   .options {
@@ -20,6 +25,10 @@
 
     .option {
       padding: 10px 15px;
+
+      &-active {
+        font-weight: bolder;
+      }
     }
   }
 }

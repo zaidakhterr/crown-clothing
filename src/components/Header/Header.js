@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import { ReactComponent as Logo } from '../../assets/crown.svg';
 import './Header.scss';
@@ -7,19 +7,35 @@ import './Header.scss';
 function Header() {
   return (
     <div className='header'>
-      <Link className='logo-container' to='/'>
+      <NavLink
+        exact
+        className='logo-container'
+        activeClassName='logo-container-active'
+        to='/'>
         <Logo className='logo' />
-      </Link>
+      </NavLink>
       <div className='options'>
-        <Link className='option' to='/shop'>
+        <NavLink
+          exact
+          className='option'
+          activeClassName='option-active'
+          to='/shop'>
           SHOP
-        </Link>
-        <Link className='option' to='/contact'>
+        </NavLink>
+        <NavLink
+          exact
+          className='option'
+          activeClassName='option-active'
+          to='/contact'>
           CONTACT
-        </Link>
-        <Link className='option' to='/sign-in'>
+        </NavLink>
+        <NavLink
+          exact
+          className='option'
+          activeClassName='option-active'
+          to='/sign-in'>
           SIGN IN
-        </Link>
+        </NavLink>
       </div>
     </div>
   );
