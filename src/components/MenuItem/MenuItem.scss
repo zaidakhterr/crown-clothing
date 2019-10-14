@@ -1,16 +1,16 @@
 .menu-item {
   min-width: 30%;
-  min-height: 340px;
+  min-height: 320px;
   flex: 1 1 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
+  border: 1px solid #444;
   margin: 0 7.5px 15px;
   overflow: hidden;
 
   &.large {
-    height: 480px;
+    height: 460px;
   }
 
   &:hover {
