@@ -30,3 +30,32 @@
     }
   }
 }
+
+//small screens
+@media (max-width: 575px) {
+  .collection-item {
+    width: 90%;
+    height: 200px;
+
+    .footer {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media (min-height: 660px) and (max-height: 900px) {
+    .collection-item {
+      height: 250px;
+    }
+  }
+}
+
+//medium screens
+@media (min-width: 576px) and (max-width: 991px) {
+  .collection-item {
+    width: 40%;
+
+    .footer {
+      margin-bottom: 30px;
+    }
+  }
+}

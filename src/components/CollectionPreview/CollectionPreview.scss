@@ -13,3 +13,13 @@
     justify-content: space-between;
   }
 }
+
+//small screens
+@media (max-width: 991px) {
+  .collection-preview {
+    .preview {
+      flex-flow: wrap;
+      justify-content: space-around;
+    }
+  }
+}

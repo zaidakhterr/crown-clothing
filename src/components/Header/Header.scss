@@ -8,7 +8,7 @@
   .logo-container {
     height: 100%;
     width: 70px;
-    padding: 13px 25px;
+    padding: 13px 10px;
     transition: 300ms all;
 
     &-active {
@@ -29,6 +29,77 @@
       &-active {
         font-weight: bolder;
       }
+    }
+  }
+
+  .burger {
+    margin: 21px 20px;
+    display: none;
+    cursor: pointer;
+
+    div {
+      width: 30px;
+      height: 3px;
+      border-radius: 5px;
+      background-color: #555;
+      margin: 5px;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .app {
+    &.fixed {
+      overflow: hidden;
+      position: fixed;
+    }
+  }
+
+  .header {
+    border: SOLID RED 2px;
+    &.responsive {
+      .options {
+        transform: translateX(0);
+        position: fixed;
+      }
+    }
+
+    .options {
+      padding-top: 40px;
+
+      background-color: #fff;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 90px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-end;
+      z-index: 9999;
+      transform: translateX(120%);
+      transition: transform 0.5s;
+
+      .option {
+        align-self: stretch;
+        padding-right: 50px;
+        padding: 20px 50px;
+        border-bottom: 2px solid #aaa;
+        font-weight: bolder;
+
+        &:first-child {
+          border-top: 2px solid #aaa;
+        }
+
+        &:active {
+          background-color: #eee;
+        }
+      }
+    }
+
+    .burger {
+      display: block;
     }
   }
 }

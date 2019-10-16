@@ -44,6 +44,7 @@
 
   .content {
     height: 90px;
+    width: 120px;
     padding: 0 25px;
     display: flex;
     flex-direction: column;
@@ -64,6 +65,30 @@
     .subtitle {
       font-weight: lighter;
       font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .menu-item {
+    width: 100%;
+    min-height: 120px;
+
+    .content {
+      height: 40px;
+      width: 100px;
+
+      .title {
+        margin-top: 45px;
+      }
+
+      .subtitle {
+        visibility: hidden;
+      }
+    }
+
+    &.large {
+      height: 300px;
     }
   }
 }
