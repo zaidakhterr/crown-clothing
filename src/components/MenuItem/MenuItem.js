@@ -14,10 +14,10 @@ function MenuItem({ title, imageUrl, size, linkUrl, history, match }) {
           backgroundImage: `url(${imageUrl})`,
         }}
       />
-      <div className='content'>
+      <button className='content'>
         <div className='title'>{title.toUpperCase()}</div>
         <span className='subtitle'>SHOP NOW</span>
-      </div>
+      </button>
     </div>
   );
 }

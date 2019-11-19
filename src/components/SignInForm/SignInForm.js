@@ -1,38 +1,35 @@
 import React, { Component } from 'react';
 import FormInput from '../FormInput/FormInput';
 import Button from '../Button/Button';
+import { signInWithGoogle } from '../../firebase/firebaseUtils';
 
 import './SignInForm.scss';
 
 export class SignInForm extends Component {
-  constructor(props) {
-    super(props);
+  state = {
+    password: '',
+    email: '',
+  };
 
-    this.state = {
-      password: '',
-      email: '',
-    };
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  handleChange(e) {
+  handleChange = e => {
+    const { name, value } = e.target;
     this.setState({
-      [e.target.name]: e.target.value,
+      [name]: value,
     });
-  }
+  };
 
-  handleSubmit(e) {
+  handleSubmit = e => {
     e.preventDefault();
 
     this.setState({ email: '', password: '' });
-  }
+  };
 
-  render() {
+  render = () => {
+    const { email, password } = this.state;
+
     return (
       <div className='sign-in-form'>
-        <h2>I already have an account</h2>
+        <h2>I already have an Account</h2>
         <span>Sign in with your email and password</span>
 
         <form onSubmit={this.handleSubmit}>
@@ -42,8 +39,9 @@ export class SignInForm extends Component {
             id='email'
             label='Email'
             handleChange={this.handleChange}
-            value={this.state.email}
+            value={email}
             required
+            autoComplete='off'
           />
           <FormInput
             type='password'
@@ -51,14 +49,20 @@ export class SignInForm extends Component {
             id='password'
             label='Password'
             handleChange={this.handleChange}
-            value={this.state.password}
+            value={password}
             required
+            autoComplete='off'
           />
-          <Button type='submit'>Sign In</Button>
+          <div className='buttons'>
+            <Button type='submit'>Sign In</Button>
+            <Button onClick={signInWithGoogle} isGoogleSignIn>
+              Sign In with Google
+            </Button>
+          </div>
         </form>
       </div>
     );
-  }
+  };
 }
 
 export default SignInForm;

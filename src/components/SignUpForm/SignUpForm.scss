@@ -1,4 +1,4 @@
-.sign-in-form {
+.sign-up-form {
   width: 380px;
   display: flex;
   flex-direction: column;
@@ -6,16 +6,8 @@
   background-color: #f7f7f7;
   padding: 20px;
   margin-top: 20px;
-  height: 400px;
 
   h2 {
     margin: 10px 0;
-  }
-
-  form {
-    .buttons {
-      display: flex;
-      justify-content: space-between;
-    }
   }
 }
