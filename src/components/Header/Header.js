@@ -1,11 +1,12 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { auth } from '../../firebase/firebaseUtils';
 
 import { ReactComponent as Logo } from '../../assets/crown.svg';
 import './Header.scss';
 
-function Header({ user }) {
+function Header({ currentUser }) {
   return (
     <div className='header' id='top-nav'>
       <NavLink
@@ -30,7 +31,7 @@ function Header({ user }) {
           to='/contact'>
           CONTACT
         </NavLink>
-        {user ? (
+        {currentUser ? (
           <div className='option' onClick={() => auth.signOut()}>
             SIGN OUT
           </div>
@@ -48,4 +49,8 @@ function Header({ user }) {
   );
 }
 
-export default Header;
+const State = ({ user }) => ({
+  currentUser: user.currentUser,
+});
+
+export default connect(State, null)(Header);
