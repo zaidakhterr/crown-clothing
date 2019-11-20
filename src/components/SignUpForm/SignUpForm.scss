@@ -2,7 +2,8 @@
   width: 380px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
+  align-self: flex-start;
   background-color: #f7f7f7;
   padding: 20px;
   margin-top: 20px;
