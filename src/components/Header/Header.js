@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { auth } from '../../firebase/firebaseUtils';
+import CartIcon from '../CartIcon/CartIcon';
 
 import { ReactComponent as Logo } from '../../assets/crown.svg';
 import './Header.scss';
@@ -32,9 +33,9 @@ function Header({ currentUser }) {
           CONTACT
         </NavLink>
         {currentUser ? (
-          <div className='option' onClick={() => auth.signOut()}>
+          <NavLink to='#' className='option' onClick={() => auth.signOut()}>
             SIGN OUT
-          </div>
+          </NavLink>
         ) : (
           <NavLink
             exact
@@ -44,6 +45,7 @@ function Header({ currentUser }) {
             SIGN IN
           </NavLink>
         )}
+        <CartIcon />
       </div>
     </div>
   );
