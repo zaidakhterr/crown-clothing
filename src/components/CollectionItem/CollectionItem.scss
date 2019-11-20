@@ -4,6 +4,8 @@
   flex-direction: column;
   height: 350px;
   align-items: center;
+  justify-content: center;
+  position: relative;
 
   .image {
     width: 100%;
@@ -29,6 +31,25 @@
       width: 10%;
     }
   }
+
+  .button {
+    width: 80%;
+    opacity: 0.7;
+    position: absolute;
+    top: 255px;
+    display: none;
+    text-align: center;
+  }
+
+  &:hover {
+    .image {
+      opacity: 0.8;
+    }
+
+    .button {
+      display: block;
+    }
+  }
 }
 
 //small screens
@@ -36,6 +57,10 @@
   .collection-item {
     width: 90%;
     height: 200px;
+
+    .button {
+      top: 100px;
+    }
 
     .footer {
       margin-bottom: 30px;
@@ -53,6 +78,10 @@
 @media (min-width: 576px) and (max-width: 991px) {
   .collection-item {
     width: 40%;
+
+    .button {
+      top: 220px;
+    }
 
     .footer {
       margin-bottom: 30px;
