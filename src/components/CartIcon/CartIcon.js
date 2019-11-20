@@ -6,13 +6,20 @@ import { ReactComponent as ShoppinIcon } from '../../assets/shoppingBag.svg';
 
 import './CartIcon.scss';
 
-const CartIcon = ({ toggleCartHidden }) => (
+const CartIcon = ({ toggleCartHidden, itemCount }) => (
   <button className='cart-icon' onClick={() => toggleCartHidden()}>
     <ShoppinIcon className='shopping-icon' />
-    <span>0</span>
+    <span>{itemCount}</span>
   </button>
 );
 
 const Dispatch = { toggleCartHidden };
 
-export default connect(null, Dispatch)(CartIcon);
+const State = ({ cart }) => ({
+  itemCount: cart.cartItems.reduce(
+    (acc, cartItem) => acc + cartItem.quantity,
+    0
+  ),
+});
+
+export default connect(State, Dispatch)(CartIcon);

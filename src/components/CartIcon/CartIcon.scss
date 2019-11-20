@@ -8,14 +8,15 @@
   cursor: pointer;
 
   .shopping-icon {
-    width: 24px;
-    height: 28px;
+    width: 28px;
+    height: 32px;
   }
 
   span {
+    text-align: center;
     position: absolute;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: bolder;
-    bottom: 14px;
+    bottom: 12px;
   }
 }
