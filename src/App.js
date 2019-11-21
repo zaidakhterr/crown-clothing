@@ -6,7 +6,7 @@ import ShopPage from './pages/ShopPage/ShopPage';
 import SignInPage from './pages/SignInPage/SignInPage';
 import Header from './components/Header/Header';
 import { auth, createUserProfileDocument } from './firebase/firebaseUtils';
-import { setCurrentUser } from './redux/actions/userActions';
+import { setCurrentUser } from './redux/user/userActions';
 
 import './App.scss';
 
@@ -56,10 +56,10 @@ class App extends Component {
 //   setUser: user => dispatch(setUser(user)),
 // });
 
-const State = ({ user }) => ({
+const mapStateToProps = ({ user }) => ({
   currentUser: user.currentUser,
 });
 
-const Dispatch = { setCurrentUser };
+const mapDispatchToProps = { setCurrentUser };
 
-export default connect(State, Dispatch)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);

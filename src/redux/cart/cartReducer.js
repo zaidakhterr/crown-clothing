@@ -1,5 +1,5 @@
-import { TOGGLE_CART_HIDDEN, ADD_ITEM } from '../actions/';
-import { addItemToCart } from '../actions/cartActions';
+import { TOGGLE_CART_HIDDEN, ADD_ITEM } from './cartActionTypes';
+import { addItemToCart } from './cartActions';
 
 const initialState = {
   hidden: true,

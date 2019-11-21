@@ -1,4 +1,4 @@
-import { TOGGLE_CART_HIDDEN, ADD_ITEM } from './';
+import { TOGGLE_CART_HIDDEN, ADD_ITEM } from './cartActionTypes';
 
 export const toggleCartHidden = () => dispatch =>
   dispatch({ type: TOGGLE_CART_HIDDEN });
