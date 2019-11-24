@@ -1,59 +1,58 @@
 import React, { Component } from 'react';
+
 import MenuItem from '../MenuItem/MenuItem';
 
 import './DirectoryMenu.scss';
 
 export class DirectoryMenu extends Component {
-  constructor(props) {
-    super(props);
+  state = {
+    sections: [
+      {
+        title: 'hats',
+        imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+        id: 1,
+        linkUrl: 'hats',
+      },
+      {
+        title: 'jackets',
+        imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
+        id: 2,
+        linkUrl: 'jackets',
+      },
+      {
+        title: 'sneakers',
+        imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+        id: 3,
+        linkUrl: 'sneakers',
+      },
+      {
+        title: 'womens',
+        imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+        size: 'large',
+        id: 4,
+        linkUrl: 'womens',
+      },
+      {
+        title: 'mens',
+        imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+        size: 'large',
+        id: 5,
+        linkUrl: 'mens',
+      },
+    ],
+  };
 
-    this.state = {
-      sections: [
-        {
-          title: 'hats',
-          imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
-          id: 1,
-          linkUrl: 'hats',
-        },
-        {
-          title: 'jackets',
-          imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
-          id: 2,
-          linkUrl: 'jackets',
-        },
-        {
-          title: 'sneakers',
-          imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
-          id: 3,
-          linkUrl: 'sneakers',
-        },
-        {
-          title: 'womens',
-          imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
-          size: 'large',
-          id: 4,
-          linkUrl: 'womens',
-        },
-        {
-          title: 'mens',
-          imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
-          size: 'large',
-          id: 5,
-          linkUrl: 'mens',
-        },
-      ],
-    };
-  }
-
-  render() {
+  render = () => {
     const { sections } = this.state;
 
-    const menuItems = sections.map(({ id, ...otherProps }) => (
-      <MenuItem key={id} {...otherProps} />
-    ));
-
-    return <div className='directory-menu'>{menuItems}</div>;
-  }
+    return (
+      <div className='directory-menu'>
+        {sections.map(({ id, ...otherProps }) => (
+          <MenuItem key={id} {...otherProps} />
+        ))}
+      </div>
+    );
+  };
 }
 
 export default DirectoryMenu;

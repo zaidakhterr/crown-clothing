@@ -1,0 +1,27 @@
+.checkout-header {
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid darkgrey;
+
+  .header-block {
+    text-transform: capitalize;
+    width: 23%;
+
+    &:last-child {
+      width: 8%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .checkout-header {
+    .header-block {
+      &.hidden {
+        visibility: hidden;
+        position: absolute;
+      }
+    }
+  }
+}

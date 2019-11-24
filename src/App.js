@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import { createStructuredSelector } from 'reselect';
+
+import Header from './components/Header/Header';
 import HomePage from './pages/HomePage/HomePage';
 import ShopPage from './pages/ShopPage/ShopPage';
 import SignInPage from './pages/SignInPage/SignInPage';
+import CheckoutPage from './pages/CheckoutPage/CheckoutPage';
 
-import Header from './components/Header/Header';
 import { auth, createUserProfileDocument } from './firebase/firebaseUtils';
+
 import { setCurrentUser } from './redux/user/userActions';
 import { selectCurrentUser } from './redux/user/userSelectors';
 
@@ -43,6 +46,7 @@ class App extends Component {
         <Switch>
           <Route exact path='/' render={() => <HomePage />} />
           <Route exact path='/shop' render={() => <ShopPage />} />
+          <Route exact path='/checkout' render={() => <CheckoutPage />} />
           <Route
             exact
             path='/sign-in'

@@ -3,15 +3,11 @@ import shopData from './ShopPage.data';
 import CollectionPreview from '../../components/CollectionPreview/CollectionPreview';
 
 export class ShopPage extends Component {
-  constructor(props) {
-    super(props);
+  state = {
+    collections: shopData,
+  };
 
-    this.state = {
-      collections: shopData,
-    };
-  }
-
-  render() {
+  render = () => {
     const { collections } = this.state;
     return (
       <div className='shop-page'>
@@ -20,7 +16,7 @@ export class ShopPage extends Component {
         ))}
       </div>
     );
-  }
+  };
 }
 
 export default ShopPage;
