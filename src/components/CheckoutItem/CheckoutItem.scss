@@ -19,18 +19,34 @@
       height: 100%;
     }
   }
+
   .name,
   .quantity,
   .price {
     width: 23%;
   }
 
+  .price {
+    margin: 0 5px;
+  }
+
   .quantity {
-    //padding-left: 20px;
+    .arrow {
+      transition: all 100ms;
+
+      &:first-child {
+        padding-right: 10px;
+      }
+
+      &:last-child {
+        padding-left: 10px;
+      }
+    }
   }
 
   .remove-button {
-    padding: 0 12px;
+    width: 8%;
+    padding: 0;
     cursor: pointer;
   }
 }
@@ -40,7 +56,7 @@
     .name {
       font-size: 18px;
       padding-bottom: 5px;
-      width: 100%;
+      width: 50%;
       position: absolute;
       bottom: 0px;
     }
@@ -49,6 +65,10 @@
     .quantity,
     .price {
       width: 29%;
+    }
+
+    .remove-button {
+      width: 13%;
     }
   }
 }

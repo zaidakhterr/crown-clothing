@@ -52,7 +52,12 @@ class App extends Component {
             path='/sign-in'
             render={() => (currentUser ? <Redirect to='/' /> : <SignInPage />)}
           />
-          <Route path='*' render={() => <h1>404 : Not Found</h1>} />
+          <Route
+            path='*'
+            render={() => (
+              <h1 style={{ marginTop: '100px' }}>404 : Not Found</h1>
+            )}
+          />
         </Switch>
       </div>
     );

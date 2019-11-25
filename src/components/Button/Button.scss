@@ -18,6 +18,11 @@
     color: #000;
   }
 
+  &:focus {
+    background-color: #000;
+    color: #f7f7f7;
+  }
+
   &:active {
     transform: scale(0.95);
   }
@@ -30,6 +35,11 @@
       background-color: #335afa;
       color: #fff;
     }
+
+    &:focus {
+      background-color: #4285f4;
+      border: 1px solid #4285f4;
+    }
   }
 
   &.invert {
@@ -40,5 +50,17 @@
       background-color: #000;
       color: #fff;
     }
+
+    &:focus {
+      background-color: #f7f7f7;
+      color: #000;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .button {
+    min-width: 100px;
+    padding: 0 12px;
   }
 }

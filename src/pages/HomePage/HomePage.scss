@@ -2,5 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  // padding: 20px 80px;
+  margin-top: 80px;
+}
+
+@media (max-width: 900px) {
+  .home-page {
+    margin-top: 70px;
+  }
 }
