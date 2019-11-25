@@ -18,6 +18,12 @@
 @media (max-width: 600px) {
   .checkout-header {
     .header-block {
+      width: 29%;
+
+      &:last-child {
+        width: 13%;
+      }
+
       &.hidden {
         visibility: hidden;
         position: absolute;
