@@ -21,15 +21,7 @@
     display: flex;
     justify-content: space-between;
     font-size: 18px;
-
-    .name {
-      width: 90%;
-      margin-bottom: 15px;
-    }
-
-    .price {
-      width: 12%;
-    }
+    margin-bottom: 15px;
   }
 
   .button {
@@ -60,6 +52,7 @@
 
     .button {
       top: 100px;
+      width: 50%;
     }
 
     .footer {
@@ -70,6 +63,10 @@
   @media (min-height: 660px) and (max-height: 900px) {
     .collection-item {
       height: 250px;
+
+      .button {
+        top: 140px;
+      }
     }
   }
 }
@@ -81,10 +78,32 @@
 
     .button {
       top: 220px;
+      width: 70%;
     }
 
     .footer {
       margin-bottom: 30px;
+    }
+  }
+}
+
+//making add to cart button visible without hover
+@media (max-width: 1366px) {
+  .collection-item {
+    .button {
+      display: block;
+      opacity: 0.7;
+
+      &:focus {
+        background-color: #f7f7f7;
+        color: #000;
+      }
+    }
+
+    &:hover {
+      .image {
+        opacity: 1;
+      }
     }
   }
 }

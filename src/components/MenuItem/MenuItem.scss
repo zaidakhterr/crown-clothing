@@ -57,7 +57,7 @@
 
     .title {
       font-weight: bold;
-      margin-bottom: 6px;
+      margin-bottom: 5px;
       font-size: 22px;
       color: #4a4a4a;
     }
@@ -77,18 +77,25 @@
     .content {
       height: 40px;
       width: 100px;
+      padding: 0 10px;
 
       .title {
-        margin-top: 45px;
+        margin-top: 5px;
       }
 
       .subtitle {
         visibility: hidden;
+        position: absolute;
+        display: none;
+
+        &:focus {
+          outline: none;
+        }
       }
     }
 
     &.large {
-      height: 300px;
+      height: 200px;
     }
   }
 }
