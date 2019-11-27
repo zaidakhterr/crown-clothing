@@ -27,13 +27,19 @@
   }
 
   .price {
-    margin: 0 5px;
+    padding: 0 5px;
   }
 
   .quantity {
-    .arrow {
-      transition: all 100ms;
+    display: flex;
 
+    span {
+      padding: 0 10px;
+      width: 35px;
+      text-align: center;
+    }
+
+    .arrow {
       &:first-child {
         padding-right: 10px;
       }
@@ -46,7 +52,6 @@
 
   .remove-button {
     width: 8%;
-    padding: 0;
     cursor: pointer;
   }
 }
@@ -61,14 +66,30 @@
       bottom: 0px;
     }
 
-    .image-container,
-    .quantity,
-    .price {
-      width: 29%;
+    .image-container {
+      width: 30%;
+    }
+
+    .quantity {
+      width: 40%;
+
+      span {
+        align-self: center;
+      }
+
+      .arrow {
+        padding: 10px 20px;
+        font-size: 30px;
+      }
+    }
+
+    .price,
+    .remove-button {
+      width: 15%;
     }
 
     .remove-button {
-      width: 13%;
+      font-size: 30px;
     }
   }
 }

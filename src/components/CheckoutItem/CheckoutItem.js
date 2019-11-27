@@ -14,11 +14,10 @@ const CheckoutItem = ({ item, clearItems, addItem, removeItem }) => {
       </div>
       <span className='name under-img'>{name}</span>
       <span className='quantity'>
-        {' '}
         <button className='arrow' onClick={() => removeItem(item)}>
           &#10096;
-        </button>{' '}
-        {quantity}{' '}
+        </button>
+        <span>{quantity}</span>
         <button className='arrow' onClick={() => addItem(item)}>
           &#10097;
         </button>
