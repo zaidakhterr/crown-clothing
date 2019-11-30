@@ -8,6 +8,7 @@ import HomePage from './pages/HomePage/HomePage';
 import ShopPage from './pages/ShopPage/ShopPage';
 import SignInPage from './pages/SignInPage/SignInPage';
 import CheckoutPage from './pages/CheckoutPage/CheckoutPage';
+import ContactPage from './pages/ContactPage/ContactPage';
 
 import { auth, createUserProfileDocument } from './firebase/firebaseUtils';
 
@@ -47,6 +48,7 @@ class App extends Component {
           <Route exact path='/' render={props => <HomePage {...props} />} />
           <Route path='/shop' render={props => <ShopPage {...props} />} />
           <Route exact path='/checkout' render={() => <CheckoutPage />} />
+          <Route exact path='/contact' render={() => <ContactPage />} />
           <Route
             exact
             path='/sign-in'
