@@ -1,5 +1,5 @@
 .collection-item {
-  width: 22%;
+  width: 22vw;
   display: flex;
   flex-direction: column;
   height: 350px;
@@ -47,7 +47,7 @@
 //small screens
 @media (max-width: 575px) {
   .collection-item {
-    width: 90%;
+    width: 80vw;
     height: 200px;
 
     .button {
@@ -74,7 +74,7 @@
 //medium screens
 @media (min-width: 576px) and (max-width: 991px) {
   .collection-item {
-    width: 40%;
+    width: 40vw;
 
     .button {
       top: 220px;

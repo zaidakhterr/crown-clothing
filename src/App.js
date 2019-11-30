@@ -44,8 +44,8 @@ class App extends Component {
       <div className='app' id='app'>
         <Header />
         <Switch>
-          <Route exact path='/' render={() => <HomePage />} />
-          <Route exact path='/shop' render={() => <ShopPage />} />
+          <Route exact path='/' render={props => <HomePage {...props} />} />
+          <Route path='/shop' render={props => <ShopPage {...props} />} />
           <Route exact path='/checkout' render={() => <CheckoutPage />} />
           <Route
             exact
@@ -55,7 +55,7 @@ class App extends Component {
           <Route
             path='*'
             render={() => (
-              <h1 style={{ marginTop: '100px' }}>404 : Not Found</h1>
+              <h1 style={{ marginTop: '100px' }}>404 : Page Not Found</h1>
             )}
           />
         </Switch>

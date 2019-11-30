@@ -1,0 +1,41 @@
+.collection-page {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    padding-bottom: 20px;
+  }
+
+  .collection {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .collection-page {
+    margin-top: 70px;
+  }
+}
+
+@media (max-width: 575px) {
+  .collection-page {
+    .collection {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .collection-page {
+    .collection {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
